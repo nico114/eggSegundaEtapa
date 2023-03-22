@@ -8,7 +8,7 @@ public class EjercicioDePruebaNico {
     public static void main(String[] args) {
      
         Scanner leer = new Scanner(System.in);
-        System.out.println("esto sale por consola");
+     
         System.out.println("escriba dos numeros");
 
       int num1 = leer.nextInt();
