@@ -23,7 +23,7 @@ public class ejercicio4Dia2 {
         System.out.println("el triple del numero es: " + (num*3));
         
         System.out.println("la raiz cuadrada  del numero es: " + Math.sqrt(num));
-      
+         
 
     }
 

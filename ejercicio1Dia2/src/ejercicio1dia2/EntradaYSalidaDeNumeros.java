@@ -21,8 +21,6 @@ public class EntradaYSalidaDeNumeros {
         System.out.println("escriba 2 numeros");
         int num1 = leer.nextInt();
         int num2 = leer.nextInt();
-       
-        
         System.out.println("la suma de los dos numeros es: " + (num1 + num2) );
 
 
