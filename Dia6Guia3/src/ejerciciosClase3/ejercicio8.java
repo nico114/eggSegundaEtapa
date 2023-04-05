@@ -25,8 +25,9 @@ public class ejercicio8 {
         for (int i = 0; i < linea; i++) {
             for (int j = 0; j < linea; j++) {
                 if (true) {
-                    
+                    System.out.println(" *");
                 }
+                else { System.out.println("");
             }
             
         }
@@ -34,4 +35,5 @@ public class ejercicio8 {
        
     }
     
+}
 }

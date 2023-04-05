@@ -62,7 +62,7 @@ switch (opcion) {
                 
                 
                 
-            } while (!opcion.equals("s"));
+            } while ( ! "s".equalsIgnoreCase(opcion));
             
             
             

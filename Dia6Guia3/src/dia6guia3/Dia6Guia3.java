@@ -24,6 +24,7 @@ public class Dia6Guia3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Scanner leer = new Scanner(System.in);
         String cadena;
         int contadorCorrecto=0;
@@ -36,8 +37,11 @@ public class Dia6Guia3 {
             cadena = leer.nextLine();
           
             
-            if (cadena.length() 5 && cadena.charAt(0) == "x" && cadena.charAt(4) == "o") 
-            {
+            if (cadena.toLowerCase().length() == 5 && cadena.toLowerCase().charAt(0) == 'X' && cadena.charAt(4) == 'O') { 
+               
+                
+            
+            
                 contadorCorrecto++;
                 
             } else
