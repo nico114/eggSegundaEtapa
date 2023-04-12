@@ -27,9 +27,4 @@ public class Persona {
         this.sexo = sexo;
         this.nacionalidad = nacionalidad;
     }
-
-    Persona() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }
