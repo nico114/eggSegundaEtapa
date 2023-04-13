@@ -35,17 +35,14 @@ public class AtributoLIbro {
          System.out.println("ingrese el ISBN");
          this.ISBN = leer.nextInt();
          System.out.println("ingrese el titulo del libro");
-         this.titulo = leer.next();
+         this.titulo = leer.next(autor);
          System.out.println("ingrese el autor del libro");
          this.autor= leer.next();
          System.out.println("ingrese el numero de paginas");
          this.numPaginas= leer.nextInt();
      }
 
-    @Override
-    public String toString() {
-        return "AtributoLIbro{" + "ISBN=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", numPaginas=" + numPaginas + '}';
-    }
+}
     
    
     
@@ -53,4 +50,4 @@ public class AtributoLIbro {
     
     
     
-}
+
