@@ -60,7 +60,7 @@ public class ExtraPoo3 {
           respuesta=leer.next();
             
           System.out.println("ganaste " + contVictorias + " veces");
-     
+   
       }
       
       while("si".equalsIgnoreCase(respuesta)==true);
