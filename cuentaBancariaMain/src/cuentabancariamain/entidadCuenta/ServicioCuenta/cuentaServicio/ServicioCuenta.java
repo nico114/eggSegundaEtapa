@@ -54,7 +54,7 @@ double total=0;
         aux = leer.next();
         if ("y".equalsIgnoreCase(aux)) {
             System.out.println("ingrese un monto");
-            banco.setIngeso(leer.nextInt());
+            banco.setIngeso(leer.nextDouble());
             total+=banco.getIngeso();
 
         }
@@ -77,11 +77,13 @@ double total=0;
         System.out.println("desea retirar dinero? y para continuar, r para extraccion rapida");
         String aux2 = leer.next();
         porcentaje=banco.getIngeso()*0.2;
-        if ("r".equalsIgnoreCase(aux2) && porcentaje> banco.getIngeso()){
+        if ("r".equalsIgnoreCase(aux2)){
             System.out.println("usted retiro el 20% de su saldo " + porcentaje);
         } else {
             System.out.println("imposible realizar operacion");
-            
+  
+
+  
         }
             
         if ("y".equalsIgnoreCase(aux2)) {
@@ -92,7 +94,8 @@ double total=0;
         if (banco.getIngeso() < banco.getDinero()) {
             System.out.println("saldo insuficiente");
 
-        } else {
+        } else if ()
+                {
 
             System.out.println("usted retiro " + banco.getDinero());
             System.out.println("su saldo disponible es " + (banco.getIngeso() - banco.getDinero()));

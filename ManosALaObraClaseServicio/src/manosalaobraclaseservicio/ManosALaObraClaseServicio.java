@@ -14,8 +14,7 @@ public class ManosALaObraClaseServicio {
 
     public class sevicio {
         persona p1 = new persona();
-        Scanner leer = Scanner(System.in).useDelimiter("\n");
-        sout
+     
     }
     
 }
