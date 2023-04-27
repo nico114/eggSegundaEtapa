@@ -96,7 +96,7 @@ public class entidadCuenta {
 
     @Override
     public String toString() {
-        return "sus datos son: " + "titular:" + titular + ", contraseña=" + contraseña + ", " + ingeso + ", dinero=" + dinero + '}';
+        return "sus datos son: " + "titular:" + titular + ", contraseña=" + contraseña + ", dinero ingresado "  + ingeso + ", dinero disponible " + dinero ;
     }
 
     

@@ -39,8 +39,7 @@ public class ServicioCuenta {
             System.out.println("ingrese contraseña");
             check2 = leer.next();
 
-        } while (!check2.equals(banco.getContraseña()) && !check1.equals(banco.getTitular()));
-
+        } while (check2.equals(banco.getContraseña()) || check1.equals(banco.getTitular()));
         System.out.println("bienvenido " + banco.getTitular());
         
         
@@ -79,8 +78,11 @@ double total=0;
         porcentaje=banco.getIngeso()*0.2;
         if ("r".equalsIgnoreCase(aux2)){
             System.out.println("usted retiro el 20% de su saldo " + porcentaje);
+            System.out.println("su saldo es " + (banco.getIngeso()-porcentaje));
+           
         } else {
             System.out.println("imposible realizar operacion");
+            
   
 
   
@@ -94,8 +96,7 @@ double total=0;
         if (banco.getIngeso() < banco.getDinero()) {
             System.out.println("saldo insuficiente");
 
-        } else if ()
-                {
+        } else{
 
             System.out.println("usted retiro " + banco.getDinero());
             System.out.println("su saldo disponible es " + (banco.getIngeso() - banco.getDinero()));

@@ -42,6 +42,7 @@ public class servicioCafetera {
         System.out.println("quiere llenar su taza?");
 
         if (tamaño < cafetera1.getCapMaxima()) {
+    
 
             cafetera1.setCapMinima(cafetera1.getCapMaxima() - tamaño);
 
@@ -56,16 +57,18 @@ public class servicioCafetera {
     //Método vaciarCafetera(): pone la cantidad de café actual en cero.
 
     public void vaciarCafetera() {
-        System.out.println("");
+        System.out.println("quiere vaciar la cafetera? presione y");
+
         cafetera1.setCapMinima(0);
-        
+        System.out.println("cafetera en " + cafetera1.getCapMinima());
+
     }
 
     public void agregarCafe() {
 
         System.out.println("cuanto cafe quiere agregar");
         cafetera1.setCapMinima(cafetera1.getCapMinima() + (leer.nextInt()));
-        System.out.println("cargo " + cafetera1.getCapMinima() + " ml de cafe" + cafetera1.getCapMinima() );
+        System.out.println("cargo " + cafetera1.getCapMinima() + " ml de cafe" + cafetera1.getCapMinima());
     }
 
 }
