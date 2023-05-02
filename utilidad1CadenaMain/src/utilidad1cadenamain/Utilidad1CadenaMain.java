@@ -16,10 +16,16 @@ public class Utilidad1CadenaMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    servicioCadena cadena = new servicioCadena();
-    cadena.crearFrase();
-    cadena.mostrarFrase();
-    cadena.mostrarVocales();
+        servicioCadena cadena = new servicioCadena();
+
+        cadena.mostrarFrase();
+        cadena.mostrarVocales();
+        cadena.invertirFrase();
+        cadena.vecesRepetido();
+        cadena.compararLongitud();
+        cadena.unirFrase();
+        cadena.reemplazar();
+        cadena.contiene();
     }
-    
+
 }

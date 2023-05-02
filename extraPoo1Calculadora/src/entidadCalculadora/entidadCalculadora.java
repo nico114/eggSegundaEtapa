@@ -20,43 +20,43 @@ package entidadCalculadora;
  * @author thell
  */
 public class entidadCalculadora {
-    private double a;
-    private double b;
-    private double c;
-    
-
-    public double getA() {
-        return a;
-    }
-
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    public double getB() {
-        return b;
-    }
-
-    public void setB(double b) {
-        this.b = b;
-    }
-
-    public double getC() {
-        return c;
-    }
-
-    public void setC(double c) {
-        this.c = c;
-    }
-
-    public entidadCalculadora(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
+    private int a;
+    private int b;
+    private int c;
 
     public entidadCalculadora() {
     }
+
+    public entidadCalculadora(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public int getC() {
+        return c;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
     
+
     
 }

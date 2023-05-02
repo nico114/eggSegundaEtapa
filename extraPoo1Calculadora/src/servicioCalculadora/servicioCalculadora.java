@@ -24,82 +24,114 @@ import java.util.Scanner;
  */
 public class servicioCalculadora {
 
+   
     Scanner leer = new Scanner(System.in);
-
+ entidadCalculadora calculadora = new entidadCalculadora();
     public entidadCalculadora llenerCoeficiente() {
-        entidadCalculadora calculadora = new entidadCalculadora();
+
         System.out.println("ingrese a");
-        calculadora.setA(leer.nextDouble());
+        calculadora.setA(leer.nextInt());
         System.out.println("ingrese b");
-        calculadora.setB(leer.nextDouble());
+        calculadora.setB(leer.nextInt());
         System.out.println("ingrese c");
-        calculadora.setC(leer.nextDouble());
+        calculadora.setC(leer.nextInt());
 
         return calculadora;
     }
-//        (b^2)-4*a*c
+//   Método getDiscriminante(): devuelve el valor del discriminante (double). El discriminante tiene la siguiente fórmula: (b^2)-4*a*c    
 
-    public double getDiscriminante(entidadCalculadora calculadora) {
-        double resultado1;
-        resultado1 = Math.pow(calculadora.getB(), 2) - 4 * calculadora.getA() * calculadora.getC();
+    public int getDiscriminante(entidadCalculadora calculadora) {
+        int resultado1;
+        resultado1 = (int) (Math.pow(calculadora.getB(), 2) - 4 * calculadora.getA() * calculadora.getC());
         return resultado1;
 
     }
+//Método tieneRaices(): devuelve un booleano indicando si tiene dos soluciones, para que esto ocurra, el discriminante debe ser mayor o igual que 0.
 
-    public boolean tieneRaices(entidadCalculadora calculadora) {
+    public boolean tieneRaices() {
 
         return getDiscriminante(calculadora) >= 0;
     }
 
 //  Método tieneRaiz(): devuelve un booleano indicando si tiene una única solución, para que esto ocurra, el discriminante debe ser igual que 0.     
-    public boolean tieneRaiz(entidadCalculadora calculadora) {
+    public boolean tieneRaiz() {
 
         return getDiscriminante(calculadora) == 0;
     }
 
     //   Método obtenerRaices(): llama a tieneRaíces() y si devolvió́ true, imprime las 2 posibles soluciones.
     // Fórmula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varía el signo delante de -b
-    public double obtenerRaices(servicioCalculadora calculadora) {
+    public void obtenerRaices() {
 
-        double solucion1;
-        double solucion2;
+        int result1;
       
-        solucion1 = ((-calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
 
-        solucion2 = ((calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
-        if ( servicioCalculadora.tieneRaices()  == true) {
-          
+        if (tieneRaices() == true){
+
+            result1 = (int) ((-calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
+
+       
+
+            System.out.println("resultado 1: " + result1);
+           
 
         } else {
             System.out.println("no se puede resolver");
         }
 
-        return 0 ;
+    }
+    public void obtenerRaices2(){
+          int result2;
+          
+          
+        if (tieneRaices() == true){
+
+        
+            result2 = (int) ((calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
+
+       
+            System.out.println("resultado 2: " + result2);
+
+        } else {
+            System.out.println("no se puede resolver");
+        }
+          
+          
+          
+          
+          
     }
 //Método obtenerRaiz(): llama a tieneRaiz() y si devolvió́ true imprime una única raíz. Es en el caso en que se tenga una única solución posible.
 
-    public double obtenerRaiz(entidadCalculadora calculadora) {
-        double resultado2;
-        if (tieneRaiz() ) {
-            resultado2 = -calculadora.getB() / (2 * calculadora.getA());
+    public void obtenerRaiz() {
+        int solucion1;
+        int solucion2;
 
+        if (tieneRaiz() == true) {
+
+            solucion1 = (int) ((-calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
+
+            solucion2 = (int) ((calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
+            
+            System.out.println("la solucion es: " +solucion1);
+            System.out.println("la solucion es: " +solucion2);
+        } else {
+            System.out.println("no se puede resolver");
         }
-        return resultado2;
+
+    }
+
 //    Método calcular(): esté método llamará tieneRaices() y a tieneRaíz(),
 //y mostrará por pantalla las posibles soluciones que tiene nuestra ecuación con los métodos obtenerRaices() o obtenerRaiz(),
 ////según lo que devuelvan nuestros métodos y en caso de no existir solución, se mostrará un mensaje.
 //    
+    public void calcular(){
+        System.out.println(tieneRaices());
+        System.out.println(tieneRaiz());
+        System.out.println(obtenerRaices());
+        System.out.println(tieneRaices2());
+   
     }
-
-    public void calcular(calculadoraMain calculadora) {
-
-        if (tieneRaiz() == true || tieneRaices() == true) {
-            System.out.println("su resultado es: " + obtenerRaiz().resultado2);
-            System.out.println("su resultado es: " + obtenerRaices().solucion1);
-            System.out.println("su resultado es: " + obtenerRaices().solucion2);
-
-        }
-
-    }
+   
 
 }

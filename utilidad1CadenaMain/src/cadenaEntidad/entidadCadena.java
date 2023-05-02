@@ -15,11 +15,10 @@ public class entidadCadena {
     private int longitud;
 
     public entidadCadena() {
-    }
+        this.frase = "hola mundo cruel";
 
-    public entidadCadena(String frase) {
-        this.frase = frase;
-        this.longitud=frase.length();
+        this.longitud = frase.length();
+
     }
 
     public String getFrase() {
@@ -37,7 +36,5 @@ public class entidadCadena {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
-    
-
 
 }

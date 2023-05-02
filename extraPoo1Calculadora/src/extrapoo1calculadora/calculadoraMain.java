@@ -26,6 +26,8 @@ Nota: Fórmula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varía el
  */
 package extrapoo1calculadora;
 
+import servicioCalculadora.servicioCalculadora;
+
 /**
  *
  * @author thell
@@ -36,6 +38,12 @@ public class calculadoraMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        servicioCalculadora calcular = new servicioCalculadora();
+       calcular.llenerCoeficiente();
+       calcular.getDiscriminante(entidadCalculadora calculadora);
+       
+        
+    }
     
     
 }
