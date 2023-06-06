@@ -15,7 +15,6 @@ Nota: Fórmula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varía el
 package servicioCalculadora;
 
 import entidadCalculadora.entidadCalculadora;
-import extrapoo1calculadora.calculadoraMain;
 import java.util.Scanner;
 
 /**
@@ -26,9 +25,9 @@ public class servicioCalculadora {
 
    
     Scanner leer = new Scanner(System.in);
- entidadCalculadora calculadora = new entidadCalculadora();
+ 
     public entidadCalculadora llenerCoeficiente() {
-
+entidadCalculadora calculadora = new entidadCalculadora();
         System.out.println("ingrese a");
         calculadora.setA(leer.nextInt());
         System.out.println("ingrese b");
@@ -48,29 +47,29 @@ public class servicioCalculadora {
     }
 //Método tieneRaices(): devuelve un booleano indicando si tiene dos soluciones, para que esto ocurra, el discriminante debe ser mayor o igual que 0.
 
-    public boolean tieneRaices() {
+    public boolean tieneRaices(entidadCalculadora calculadora) {
 
         return getDiscriminante(calculadora) >= 0;
     }
 
 //  Método tieneRaiz(): devuelve un booleano indicando si tiene una única solución, para que esto ocurra, el discriminante debe ser igual que 0.     
-    public boolean tieneRaiz() {
+    public boolean tieneRaiz(entidadCalculadora calculadora) {
 
         return getDiscriminante(calculadora) == 0;
     }
 
     //   Método obtenerRaices(): llama a tieneRaíces() y si devolvió́ true, imprime las 2 posibles soluciones.
     // Fórmula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varía el signo delante de -b
-    public void obtenerRaices() {
+    public void obtenerRaices(entidadCalculadora calculadora) {
 
         int result1;
       
-
+      
         if (tieneRaices() == true){
 
             result1 = (int) ((-calculadora.getB() + Math.sqrt(Math.pow(calculadora.getB(), 2) - (4 * calculadora.getA() * calculadora.getC()))) / (2 * calculadora.getA()));
 
-       
+     
 
             System.out.println("resultado 1: " + result1);
            

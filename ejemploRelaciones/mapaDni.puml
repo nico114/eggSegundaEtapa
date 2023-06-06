@@ -1,0 +1,5 @@
+@startuml
+class ObjetoDni.Dni
+class ObjetoPersona.Personaclass ejemplorelaciones.EjemploRelaciones
+class ejemplorelaciones.EjemploRelaciones
+@enduml

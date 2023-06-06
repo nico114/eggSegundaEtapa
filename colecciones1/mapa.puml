@@ -1,0 +1,11 @@
+@startuml
+class colecciones1.Colecciones1
+class java.util.ArrayList
+class java.util.Collections
+class java.util.Iterator
+class java.util.Scanner
+colecciones1.Colecciones1 ..> java.util.ArrayList
+colecciones1.Colecciones1 ..> java.util.Collections
+colecciones1.Colecciones1 ..> java.util.Iterator
+colecciones1.Colecciones1 ..> java.util.Scanner
+@enduml
